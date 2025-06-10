@@ -1,0 +1,14 @@
+image: node:latest
+
+pages:
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - pnpm install
+    - pnpm run build
+  artifacts:
+    paths:
+      - dist
+  only:
+    - main

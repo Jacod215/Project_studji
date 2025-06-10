@@ -1,0 +1,77 @@
+@use 'base/variables';
+@use 'base/mixins';
+@use 'layout/grid';
+@use 'layout/navigation';
+@use 'components/header';
+@use 'components/hero';
+@use 'components/form';
+@use 'components/footer';
+
+// Reset and base styles
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: variables.$font-primary;
+  background-color: variables.$background-color;
+  color: variables.$text-color;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.section-title {
+  font-size: variables.$font-size-h2;
+  color: variables.$text-color;
+  margin: variables.$spacing-lg variables.$spacing-lg variables.$spacing-md;
+  
+  @include mixins.mobile {
+    margin: variables.$spacing-md;
+    font-size: 1.5rem;
+  }
+}
+
+// Mobile optimizations
+@include mixins.mobile {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  body {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+// Improve touch targets on mobile
+@include mixins.mobile {
+  button,
+  [role="button"],
+  .nav__item,
+  .hero__slide {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+// Responsive images with lazy loading
+img {
+  &[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &.loaded {
+      opacity: 1;
+    }
+  }
+}

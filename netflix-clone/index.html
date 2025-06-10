@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__container">
+        <svg class="nav__logo" viewBox="0 0 111 30" fill="#e50914">
+          <path d="M105.06 14.28L111 30c-1.75-.25-3.499-.563-5.28-.845l-3.345-8.686-3.437 7.969c-1.687-.282-3.344-.376-5.031-.595l6.031-13.75L94.23 0h5.218l3.062 7.874L105.25 0h5.937l-6.062 14.28zM90.125 0h-4.781v27.25c1.937.188 3.844.469 5.75.688V0zm-8.563 26.937c-4.125-.547-8.281-1.219-12.469-1.688v-20.5l4.719.75v17.438c2.688.313 5.437.688 8.188.813l-.438 3.187zM64.25 10.657v4.687h-6.406V26H53.22V0h13.125v4.687h-8.5v5.97h6.406zm-18.906-5.97V26.25c-1.563 0-3.156 0-4.688.062V4.687h-4.844V0h14.406v4.687h-4.874zM30.75 15.593c-2.062 0-4.5 0-6.25.095v6.968c2.75-.188 5.5-.406 8.281-.5v4.5l-12.968 1.032V0H32.78v4.687H24.5V11c1.813 0 4.594-.094 6.25-.094v4.688zM4.781 12.968v16.375C3.094 29.531 1.593 29.75 0 30V0h4.469l6.093 17.032V0h4.688v28.062c-1.656.282-3.344.376-5.125.625L4.78 12.968z"></path>
+        </svg>
+        <ul class="nav__menu">
+          <li><a href="#" class="nav__item">Strona główna</a></li>
+          <li><a href="#" class="nav__item">Seriale i programy</a></li>
+          <li><a href="#" class="nav__item">Filmy</a></li>
+          <li><a href="#" class="nav__item">Nowe i popularne</a></li>
+          <li><a href="#" class="nav__item">Moja lista</a></li>
+          <li><a href="#" class="nav__item">Przeglądaj wg języka</a></li>
+        </ul>
+        <div class="nav__actions">
+          <button class="nav__search">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <button class="nav__notifications">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+            </svg>
+          </button>
+          <div class="nav__profile">
+            <img src="https://occ-0-1432-1433.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABRNJxR5JLMK8DKqm2r6GDXixyHm3zRANqGC8xQy2L0o2HPBEbz5evfI3uC7M6pvYOQ-jxCKUlUINAk4nxQXeP84.png?r=eea" alt="Profile" />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="header" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('https://image.tmdb.org/t/p/original/84XPpjGvxNyExjSuLQe0SzioErt.jpg')">
+      <div class="header__content">
+        <div class="header__images">
+          <img src="https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg" alt="Breaking Bad Logo" class="header__logo">
+        </div>
+        <div class="header__actions">
+          <button class="header__button header__button--primary">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+            Odtwórz
+          </button>
+          <button class="header__button header__button--secondary">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+            </svg>
+            Więcej informacji
+          </button>
+        </div>
+        <p class="header__quote">"Do organów ścigania, to nie jest przyznanie się do winy."</p>
+          </button>
+        </div>
+        <span class="header__badge">16+</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2 class="section-title">To też warto zobaczyć</h2>
+        <div class="hero__slider">
+          <div class="hero__controls">
+            <button class="hero__button hero__button--prev">&lt;</button>
+            <button class="hero__button hero__button--next">&gt;</button>
+          </div>
+          <div class="hero__slide">
+            <img src="https://image.tmdb.org/t/p/w500/huVJKH7RsY8kvweTHNb7fUZ1XbV.jpg" alt="House" class="hero__image" />
+            <div class="hero__info">
+              <h3 class="hero__title">House</h3>
+              <div class="hero__meta">
+                <span class="hero__rating">98% Match</span>
+                <span class="hero__duration">8 Seasons</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide">
+            <img src="https://image.tmdb.org/t/p/w500/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg" alt="Bridgerton" class="hero__image" />
+            <div class="hero__info">
+              <h3 class="hero__title">Bridgerton</h3>
+              <div class="hero__meta">
+                <span class="hero__rating">95% Match</span>
+                <span class="hero__duration">2 Seasons</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide">
+            <img src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg" alt="Stranger Things" class="hero__image" />
+            <div class="hero__info">
+              <h3 class="hero__title">Stranger Things</h3>
+              <div class="hero__meta">
+                <span class="hero__rating">96% Match</span>
+                <span class="hero__duration">4 Seasons</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide">
+            <img src="https://image.tmdb.org/t/p/w500/9PFonBhy4cQy7Jz20NpMygczOkv.jpg" alt="Wednesday" class="hero__image" />
+            <div class="hero__info">
+              <h3 class="hero__title">Wednesday</h3>
+              <div class="hero__meta">
+                <span class="hero__rating">93% Match</span>
+                <span class="hero__duration">1 Season</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide">
+            <img src="https://image.tmdb.org/t/p/w500/7vjaCdMw15FEbXyLQTVa04URsPm.jpg" alt="The Witcher" class="hero__image" />
+            <div class="hero__info">
+              <h3 class="hero__title">The Witcher</h3>
+              <div class="hero__meta">
+                <span class="hero__rating">92% Match</span>
+                <span class="hero__duration">3 Seasons</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide">
+            <img src="https://image.tmdb.org/t/p/w500/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg" alt="Arcane" class="hero__image" />
+            <div class="hero__info">
+              <h3 class="hero__title">Arcane</h3>
+              <div class="hero__meta">
+                <span class="hero__rating">99% Match</span>
+                <span class="hero__duration">1 Season</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero">
+        <h2 class="section-title">Trending Now</h2>
+        <div class="hero__slider">
+          <div class="hero__controls">
+            <button class="hero__button hero__button--prev">&lt;</button>
+            <button class="hero__button hero__button--next">&gt;</button>
+          </div>
+          <div class="hero__slide">
+            <img src="https://image.tmdb.org/t/p/w500/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg" alt="Squid Game" class="hero__image" />
+            <div class="hero__info">
+              <h3 class="hero__title">Squid Game</h3>
+              <div class="hero__meta">
+                <span class="hero__rating">97% Match</span>
+                <span class="hero__duration">1 Season</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide">
+            <img src="https://image.tmdb.org/t/p/w500/hRWZGtqIGrxW8QQ0BtpXAlpxORy.jpg" alt="The Crown" class="hero__image" />
+            <div class="hero__info">
+              <h3 class="hero__title">The Crown</h3>
+              <div class="hero__meta">
+                <span class="hero__rating">94% Match</span>
+                <span class="hero__duration">6 Seasons</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide">
+            <img src="https://image.tmdb.org/t/p/w500/apbrbWs8M9lyOpJYU5WXrpFbk1Z.jpg" alt="Dark" class="hero__image" />
+            <div class="hero__info">
+              <h3 class="hero__title">Dark</h3>
+              <div class="hero__meta">
+                <span class="hero__rating">95% Match</span>
+                <span class="hero__duration">3 Seasons</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide">
+            <img src="https://image.tmdb.org/t/p/w500/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg" alt="Peaky Blinders" class="hero__image" />
+            <div class="hero__info">
+              <h3 class="hero__title">Peaky Blinders</h3>
+              <div class="hero__meta">
+                <span class="hero__rating">96% Match</span>
+                <span class="hero__duration">6 Seasons</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide">
+            <img src="https://image.tmdb.org/t/p/w500/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg" alt="Money Heist" class="hero__image" />
+            <div class="hero__info">
+              <h3 class="hero__title">Money Heist</h3>
+              <div class="hero__meta">
+                <span class="hero__rating">93% Match</span>
+                <span class="hero__duration">5 Seasons</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-md;
+  padding-left: $spacing-md;
+
+  @include tablet {
+    max-width: 720px;
+  }
+
+  @include desktop {
+    max-width: 1140px;
+  }
+
+  @include mobile {
+    padding-right: $spacing-sm;
+    padding-left: $spacing-sm;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$spacing-md;
+  margin-left: -$spacing-md;
+}
+
+.col {
+  position: relative;
+  width: 100%;
+  padding-right: $spacing-md;
+  padding-left: $spacing-md;
+  flex: 1 0 0%;
+}
+
+// Mobile-first responsive columns
+@include mobile {
+  [class^="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@include tablet {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      flex: 0 0 percentage($i / 12);
+      max-width: percentage($i / 12);
+    }
+  }
+}
+
+@include desktop {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      flex: 0 0 percentage($i / 12);
+      max-width: percentage($i / 12);
+    }
+  }
+}
