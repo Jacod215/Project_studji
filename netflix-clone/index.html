@@ -2,9 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netflix Clone</title>
+    <script type="module" crossorigin src="./assets/main.klAxdP7P.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/main.CfX5hMjm.css">
   </head>
   <body>
     <nav class="nav">
@@ -12,6 +14,13 @@
         <svg class="nav__logo" viewBox="0 0 111 30" fill="#e50914">
           <path d="M105.06 14.28L111 30c-1.75-.25-3.499-.563-5.28-.845l-3.345-8.686-3.437 7.969c-1.687-.282-3.344-.376-5.031-.595l6.031-13.75L94.23 0h5.218l3.062 7.874L105.25 0h5.937l-6.062 14.28zM90.125 0h-4.781v27.25c1.937.188 3.844.469 5.75.688V0zm-8.563 26.937c-4.125-.547-8.281-1.219-12.469-1.688v-20.5l4.719.75v17.438c2.688.313 5.437.688 8.188.813l-.438 3.187zM64.25 10.657v4.687h-6.406V26H53.22V0h13.125v4.687h-8.5v5.97h6.406zm-18.906-5.97V26.25c-1.563 0-3.156 0-4.688.062V4.687h-4.844V0h14.406v4.687h-4.874zM30.75 15.593c-2.062 0-4.5 0-6.25.095v6.968c2.75-.188 5.5-.406 8.281-.5v4.5l-12.968 1.032V0H32.78v4.687H24.5V11c1.813 0 4.594-.094 6.25-.094v4.688zM4.781 12.968v16.375C3.094 29.531 1.593 29.75 0 30V0h4.469l6.093 17.032V0h4.688v28.062c-1.656.282-3.344.376-5.125.625L4.78 12.968z"></path>
         </svg>
+        <button class="nav__menu-toggle" aria-label="Open menu">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <line x1="3" y1="6" x2="21" y2="6" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="12" x2="21" y2="12" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="18" x2="21" y2="18" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
         <ul class="nav__menu">
           <li><a href="#" class="nav__item">Strona główna</a></li>
           <li><a href="#" class="nav__item">Seriale i programy</a></li>
@@ -32,7 +41,7 @@
             </svg>
           </button>
           <div class="nav__profile">
-            <img src="https://occ-0-1432-1433.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABRNJxR5JLMK8DKqm2r6GDXixyHm3zRANqGC8xQy2L0o2HPBEbz5evfI3uC7M6pvYOQ-jxCKUlUINAk4nxQXeP84.png?r=eea" alt="Profile" />
+            <img src="./assets/images/profile-avatar.png" alt="Profile" />
           </div>
         </div>
       </div>
@@ -40,9 +49,6 @@
 
     <header class="header" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), url('https://image.tmdb.org/t/p/original/84XPpjGvxNyExjSuLQe0SzioErt.jpg')">
       <div class="header__content">
-        <div class="header__images">
-          <img src="https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg" alt="Breaking Bad Logo" class="header__logo">
-        </div>
         <div class="header__actions">
           <button class="header__button header__button--primary">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -58,8 +64,6 @@
           </button>
         </div>
         <p class="header__quote">"Do organów ścigania, to nie jest przyznanie się do winy."</p>
-          </button>
-        </div>
         <span class="header__badge">16+</span>
       </div>
     </header>
@@ -73,7 +77,7 @@
             <button class="hero__button hero__button--next">&gt;</button>
           </div>
           <div class="hero__slide">
-            <img src="https://image.tmdb.org/t/p/w500/huVJKH7RsY8kvweTHNb7fUZ1XbV.jpg" alt="House" class="hero__image" />
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="House" class="hero__image" />
             <div class="hero__info">
               <h3 class="hero__title">House</h3>
               <div class="hero__meta">
@@ -153,7 +157,7 @@
             </div>
           </div>
           <div class="hero__slide">
-            <img src="https://image.tmdb.org/t/p/w500/hRWZGtqIGrxW8QQ0BtpXAlpxORy.jpg" alt="The Crown" class="hero__image" />
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=500&q=80" alt="The Crown" class="hero__image" />
             <div class="hero__info">
               <h3 class="hero__title">The Crown</h3>
               <div class="hero__meta">
@@ -196,6 +200,15 @@
       </section>
     </main>
 
-    <script type="module" src="/src/main.js"></script>
+    <script>
+      // Mobile menu toggle
+      const menuToggle = document.querySelector('.nav__menu-toggle');
+      const navMenu = document.querySelector('.nav__menu');
+      if(menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('nav__menu--open');
+        });
+      }
+    </script>
   </body>
 </html>
